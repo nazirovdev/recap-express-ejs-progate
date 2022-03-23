@@ -1,0 +1,19 @@
+<%- include('./template/header.ejs') %>
+<%- include('./template/nav.ejs') %>
+<section class="article">
+    <span>Khusus Anggota</span>
+    <h1>Mengapa disebut dengan Bug?</h1>
+    <% if (locals.isLoggedIn) { %>
+        <p>Pernahkan Anda berujar "Oh ada bug!" ketika sesuatu yang aneh terjadi ketika memainkan game atau menggunakan beberapa aplikasi? Saya jadi sangat penasaran perihal "bug" ini, jadi saya melakukan beberapa riset dan inilah yang kutemukan! Pertama-tama, kata "bug" itu sendiri mengarah ke sebuah glitch yang terjadinya tidak disengaja. Bagaimana ceritanya kata "bug" menjadi rujukan ke arah sebuah glitch? Yaa, Saya pun sudah melakukan riset tentang hal ini! Ketika melakukan riset tentang asal muasal kata "bug", membuat saya kembali ke masa sebelum komputer diciptakan. Komputer-komputer kala itu berukuran sebuah ruang kelas dan tampak seperti mesin pabrik. Suatu hari, komputer besar ini tiba-tiba berhenti bekerja dikarenakan sebuah glitch. Team yang menemukan komputer ini mencari penyebab glitch kesana-kemari dan menemukan sebuah ngengat tersangkut didalam komputer tersebut. Hanya karena satu ngengat kecil ini, mengakibatkan komputer sebesar itu berhenti bekerja. Sejak saat itu kata "bug" telah difahami sebagai maksud dari glitch-glitch yang disebabkan oleh sebuah ngengat (bug). Sulit dibayangkan saat ini bahwa alasan dari terjadinya glitch pada komputer besaar itu dikarenakan oleh sebuah serangga yang benar-benar berada didalam komputer! Jika Anda memiliki seorang teman yang berkata, "Oh ada bug!", Anda bisa menceritakan padanya cerita ini!</p>
+    <% } else { %>
+        <div class="container-alert">
+            <h1>Skuy Login dulu</h1>
+            <h2>Silahkan Login untuk untuk menikmati artikel khusus kami</h2>
+            <a href="/login">Login dulu</a>
+        </div>
+    <% } %>
+</section>
+<footer>
+    <a href="/articles">Kembali ke Artikel</a>
+</footer>
+<%- include('./template/footer.ejs') %>

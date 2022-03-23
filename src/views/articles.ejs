@@ -1,0 +1,17 @@
+<%- include('./template/header.ejs') %>
+<%- include('./template/nav.ejs') %>
+<main>
+    <div class="articles">
+        <% articles.map((article, key) => { %>
+            <article>
+                <% if (article.subscriber === 1) { %>
+                    <span>Khusus Anggota</span>
+                <% } %>
+                <h1>Mengapa disebut dengan Bug ?</h1>
+                <p>Anda mungkin sering mendengar kata "bug" ketika sedang melakukan pembuatan sebuah program, kan? Saya telah melakukan riset tentang asal muasal dari kenapa kata "bug" digunakan.</p>
+                <a href="/article/1">Baca selengkapnya</a>
+            </article> 
+        <% }) %> 
+    </div>
+</main>
+<%- include('./template/footer.ejs') %>

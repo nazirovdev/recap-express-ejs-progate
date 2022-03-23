@@ -1,0 +1,16 @@
+<header>
+    <nav>
+        <ul>
+            <li><a href="/">BLOG</a></li>
+            <li><p>Selamat Datang <%= locals.yourName %> </p></li>
+        </ul>
+        <ul>
+            <li><a href="/articles">Artikel</a></li>
+            <% if (locals.isLoggedIn) { %>
+                <li><a href="/logout">Logout</a></li>
+            <% } else { %>
+                <li><a href="/login">Login</a></li>
+            <% } %>  
+        </ul>
+    </nav>
+</header>

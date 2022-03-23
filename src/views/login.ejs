@@ -1,0 +1,15 @@
+<%- include('./template/header.ejs') %>
+<form action="/login" method="post">
+    <h1 class="title">Login</h1>
+    <div class="email-input">
+        <label for="email">Email</label>
+        <input type="text" id="email" name="email">
+    </div>
+    <div class="password-input">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password">
+    </div>
+    <button class="btn-login">Login</button>
+    <a href="/articles" class="btn-article">Kembali ke Artikel</a>
+</form>
+<%- include('./template/footer.ejs') %>
