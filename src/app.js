@@ -84,6 +84,23 @@ app.get("/signup", (req, res) => {
     res.render("signup", { title: "Signup Page" });
 });
 
+app.post("/signup", (req, res) => {
+    const { username, email, password } = req.body;
+
+    connection.query(
+        "INSERT INTO users (username, email, passwords) VALUES (?, ?, ?)",
+        [username, email, password],
+        (err, results) => {
+            if (results.affectedRows > 0) {
+                req.session.username = username;
+                res.redirect("/articles");
+            } else {
+                res.redirect("/articles");
+            }
+        },
+    );
+});
+
 app.get("/logout", (req, res) => {
     req.session.destroy((err) => {
         res.redirect("/");
