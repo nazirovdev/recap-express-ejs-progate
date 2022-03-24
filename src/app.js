@@ -80,6 +80,10 @@ app.post("/login", (req, res) => {
     );
 });
 
+app.get("/signup", (req, res) => {
+    res.render("signup", { title: "Signup Page" });
+});
+
 app.get("/logout", (req, res) => {
     req.session.destroy((err) => {
         res.redirect("/");

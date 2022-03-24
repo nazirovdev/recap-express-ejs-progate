@@ -1,0 +1,19 @@
+<%- include('./template/header.ejs') %>
+<form action="/signup" method="post">
+    <h1 class="title">Signup</h1>
+    <div class="email-input">
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username">
+    </div>
+    <div class="email-input">
+        <label for="email">Email</label>
+        <input type="text" id="email" name="email">
+    </div>
+    <div class="password-input">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password">
+    </div>
+    <button class="btn-login">Signup</button>
+    <a href="/articles" class="btn-article">Kembali ke Artikel</a>
+</form>
+<%- include('./template/footer.ejs') %>
